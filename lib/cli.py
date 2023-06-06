@@ -31,17 +31,17 @@ if __name__ == '__main__':
     elif user_input == 'r':
         print("Sure fam, I can tell you all about these drinks!")
         drinks = session.query(Drink)
-        print(f"These are all of our {drinks.count()} drinks available!")
+        print(f"These are our {drinks.count()} drinks available!")
         print("Here is the business with all of our drinks:")
         for drink in drinks:
-            print(drink)
+            print(f"Drink #{drink.id} : {drink.name}")
 
     elif user_input == 'u':
         print("I heard you wanted to change up our drinks!")
         drinks = session.query(Drink)
         print("Here is the business with all of our drinks: ")
         for drink in drinks:
-            print(drink)
+            print(f"Drink #{drink.id} : {drink.name}")
         drink_id = input("Tell me the digits for the id of the drink you want to shake up: ")
         drink = drinks.filter(Drink.id == int(drink.id)).first()
         drink_name = input("Tell me, what's the new name for this sweet goddess of a drink?: ")
@@ -54,8 +54,8 @@ if __name__ == '__main__':
         drinks = session.query(Drink)
         print("Here is the business with all of our drinks: ")
         for drink in drinks:
-            print(drink)
-        drink_id = input("Compadre, tell me, which specific drink needs to get knocked off or just say 'Tipsay' to get knock out all drinks: ")
+            print(f"Drink #{drink.id} : {drink.name}")
+        drink_id = input("Compadre, tell me, which specific drink number needs to get knocked off or just say 'Tipsay' to get knock out all drinks: ")
         if drink_id == 'Tipsay':
             drinks.delete()
             session.commit()
@@ -63,5 +63,5 @@ if __name__ == '__main__':
         else:
             drink = drinks.filter(Drink.id == int(drink_id)).first()
             session.delete(drink)
-            session.commit
+            session.commit()
             print(f"Say No More! This Drink #{drink.id}: {drink.name} went down the drain!")
