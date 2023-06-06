@@ -19,7 +19,7 @@ class Drink(Base):
 
     orders = relationship('Order', backref='drink')
     customers = association_proxy("orders", "customer",
-        creater=lambda c: Order(customer=c))
+        creator=lambda c: Order(customer=c))
 
 
     def __repr__(self):
@@ -34,7 +34,7 @@ class Customer(Base):
 
     orders = relationship("Order", backref="customer")
     drinks = association_proxy("orders", "drink",
-        creater=lambda d: Order(drink=d))
+        creator=lambda d: Order(drink=d))
 
     def __repr__(self):
         return f"Customer #{self.id}: {self.first_name} {self.last_name}"
