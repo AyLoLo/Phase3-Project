@@ -23,7 +23,7 @@ class Drink(Base):
 
 
     def __repr__(self):
-        return f"Drink #(self.id): {self.name}"
+        return f"Drink #{self.id}: {self.name}"
     
 class Customer(Base):
     __tablename__ = 'customers'
@@ -31,6 +31,7 @@ class Customer(Base):
     id = Column(Integer(), primary_key=True)
     first_name = Column(String())
     last_name = Column(String())
+    name = first_name + last_name
 
     orders = relationship("Order", backref="customer")
     drinks = association_proxy("orders", "drink",
@@ -41,13 +42,12 @@ class Customer(Base):
     
 class Order(Base):
     __tablename__ = 'orders'
-
+    
     id = Column(Integer(), primary_key=True)
     times_ordered = Column(String())
-
+    
     drink_id = Column(Integer(), ForeignKey('drinks.id'))
     customer_id = Column(Integer(), ForeignKey('customers.id'))
 
     def __repr__(self):
-        return f"This {self.drink.name} was ordered {self.times_ordered} by {self.customer.first_name} {self.customer.last_name}"
-
+        return f"{self.customer.first_name} ordered {self.drink.name} {self.times_ordered} time(s)"
