@@ -5,8 +5,11 @@ Tipsy Fam is a Python application that allows users to interact with a database 
 **Features**
 * Create new drinks and add them to the menu
 * Get a list of available drinks
+* Update existing drinks
 * Place orders for drinks
 * View list of orders placed
+* Delete a drink or clear out the list of drinks
+* Clear out the list of orders 
 
 **Prerequisites**
 * Python
