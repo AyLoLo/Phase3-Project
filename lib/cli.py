@@ -44,7 +44,7 @@ if __name__ == '__main__':
         
         order_amount = input("How many of that? Just one? Two? How many? ")
         
-        customer_id_order = int(input("And this is for which regular(id) ...? "))
+        customer_id_order = int(input("And this is for which customer(id) ...? "))
         if 0 < customer_id_order <= len(customers):
             print("You got it boss!")
         else:
