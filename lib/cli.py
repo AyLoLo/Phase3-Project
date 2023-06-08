@@ -14,11 +14,11 @@ if __name__ == '__main__':
 
     print("Ayooo Boss, Welcome To Our Tipsy Fam Bar!")
     print("What can I get for you today?")
-    user_input = input('Enter "c" to create a new drink\nEnter "r" to get a list of our drinks\nEnter "u" to update existing drinks\nEnter "d" to delete drinks\nEnter "p" to see our most popular drinks\nEnter "o" to create an order\nEnter "m" if you want to close the bar and clear all orders\n')
+    user_input = input('Enter "c" to create a new drink\nEnter "r" to get a list of our drinks\nEnter "u" to update existing drinks\nEnter "d" to delete drinks\nEnter "p" to see a list of our previous orders\nEnter "o" to create an order\nEnter "m" if you want to close the bar and clear all orders\n')
 
     while(not user_input in ['c', 'r', 'u', 'd', 'p', 'o', 'm']):
         print("Sorry amigo, I didn't quite catch that. ")
-        user_input = input('Enter "c" to create a new drink\nEnter "r" to get a list of our drinks\nEnter "u" to update existing drinks\nEnter "d" to delete drinks\nEnter "p" to see our most popular drinks\nEnter "o" to create an order\nEnter "m" if you want to close the bar and clear all orders\n')
+        user_input = input('Enter "c" to create a new drink\nEnter "r" to get a list of our drinks\nEnter "u" to update existing drinks\nEnter "d" to delete drinks\nEnter "p" to see a list of our previous orders\nEnter "o" to create an order\nEnter "m" if you want to close the bar and clear all orders\n')
 
     if user_input == 'c':
         print("Aye, what's this hot new drink? ")
