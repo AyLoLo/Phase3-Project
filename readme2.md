@@ -14,7 +14,7 @@ Tipsy Fam is a Python application that allows users to interact with a database 
 
 **Getting Started**
 * Clone this repository to your local machine
-* Install the required dependencies
+* Install the required dependencies pipenv install & shell
 * Set up the database by executing the "seed.py" script
 * Run the application by executing the "main.py" script
 * Follow the prompts in the command-line interface to interact with the application. Note that "User" represents the owner of the establishment, speaking to the bartender.
