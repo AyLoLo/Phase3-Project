@@ -53,7 +53,7 @@ if __name__ == '__main__':
         for drink in drinks:
             print(f"Drink #{drink.id} : {drink.name}")
         drink_id = input("Tell me the digits for the id of the drink you want to shake up: ")
-        drink = drinks.filter(Drink.id == int(drink.id)).first()
+        drink = drinks.filter(Drink.id == int(drink_id)).first()
         drink_name = input("Tell me, what's the new name for this sweet goddess of a drink?: ")
         drink.name = drink_name
         session.commit()
