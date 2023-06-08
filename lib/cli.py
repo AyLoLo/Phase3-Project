@@ -12,7 +12,7 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    print("Ayooo Tipsy Fam, Welcome To Our Bar!")
+    print("Ayooo Boss, Welcome To Our Tipsy Fam Bar!")
     print("What can I get for you today?")
     user_input = input('Enter "c" to create a new drink\nEnter "r" to get a list of our drinks\nEnter "u" to update existing drinks\nEnter "d" to delete drinks\nEnter "p" to see our most popular drinks\nEnter "o" to create an order\nEnter "m" if you want to close the bar and clear all orders\n')
 
